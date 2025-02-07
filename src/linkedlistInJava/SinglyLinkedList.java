@@ -11,6 +11,15 @@ class Node{
 }
 
 public class SinglyLinkedList {
+	
+	static boolean searchList(Node head, int target) {
+		while(head!=null) {
+			if(head.data==target)
+				return true;
+			head = head.next;
+		}
+		return false;
+	}
 
 	static int listLength(Node head) {
 		int count = 0;
@@ -119,9 +128,7 @@ public class SinglyLinkedList {
 			curr=curr.next;
 		}
 		
-//		Node temp=curr.next;
 		curr.next=curr.next.next;
-//		temp=null;
 		return head;
 	}
 	
